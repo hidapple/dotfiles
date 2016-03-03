@@ -2,7 +2,7 @@
 
 # Env vars
 export LANG=ja_JP.UTF-8
-export PATH=/usr/local/bin:${HOME}/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin
 export PGDATA=/usr/local/var/postgres
 export JAVA_HOME=`/usr/libexec/java_home -v '1.8*'`
 export GLASSFISH_HOME=/usr/local/opt/glassfish/libexec
@@ -59,9 +59,10 @@ zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
 ################################
 # option
-# 日本語ファイル名を表示可能にする
 setopt print_eight_bit
-# beep音を無効化
 setopt no_beep
 
+# rbenv
+# if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+export PATH="$HOME/.rbenv/shims:$PATH"
 
