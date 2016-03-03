@@ -7,6 +7,7 @@ export PGDATA=/usr/local/var/postgres
 export JAVA_HOME=`/usr/libexec/java_home -v '1.8*'`
 export GLASSFISH_HOME=/usr/local/opt/glassfish/libexec
 export PATH=${PATH}:${GLASSFISH_HOME}/bin
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # alias
 alias ls="ls -GF"
