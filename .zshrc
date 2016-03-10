@@ -63,6 +63,7 @@ setopt print_eight_bit
 setopt no_beep
 
 # rbenv
-# if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="$HOME/.rbenv/shims:$PATH"
 
+# pyenv
+export PATH="$HOME/.pyenv/shims:$PATH"
