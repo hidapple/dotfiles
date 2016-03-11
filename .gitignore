@@ -5,6 +5,3 @@
 *~
 *.swp
 .*.un~
-.vim/bundle/
-.vim/bundle/.*
-.vim/.netrwhist
