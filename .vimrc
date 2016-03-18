@@ -31,7 +31,6 @@ set smartcase
 set incsearch
 set wrapscan
 set backspace=indent,eol,start
-set clipboard=unnamed
 set noswapfile
 set nobackup
 set formatoptions+=mM
