@@ -11,8 +11,10 @@ export PATH="$HOME/.pyenv/shims:$PATH" # pyenv
 
 ### Alias
 alias ls="ls -GF"
-alias gls="gls --color"
 alias gs="git status"
+alias ll="ls -l"
+alias la="ls -a"
+alias cl="clear"
 
 ### Command histroy
 HISTFILE=~/.zsh_history
