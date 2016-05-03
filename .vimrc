@@ -119,9 +119,6 @@ NeoBundle 'mattn/emmet-vim'
 """ Langages
 NeoBundle 'StanAngeloff/php.vim'
 NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'slim-template/vim-slim.git'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'plasticboy/vim-markdown'
   let g:vim_markdown_folding_disabled=1
