@@ -42,7 +42,7 @@ setopt no_beep
 ### PROMPT
 autoload -Uz colors
 colors
-PROMPT="%F{green}%n@%m [%~]%f
+PROMPT="%F{green}%n@%m%f %F{yellow}[%~]%f
 %# "
 
 autoload -Uz vcs_info
