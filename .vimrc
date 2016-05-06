@@ -68,8 +68,8 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'tyru/caw.vim.git'
-  nmap <Leader>c <Plug>(caw:i:toggle)
-  vmap <Leader>c <Plug>(caw:i:toggle)
+  nmap <C-_> <Plug>(caw:i:toggle)
+  vmap <C-_> <Plug>(caw:i:toggle)
 NeoBundle 'surround.vim'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'Shougo/unite.vim'
