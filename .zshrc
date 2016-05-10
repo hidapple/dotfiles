@@ -1,9 +1,5 @@
-# ----------------------------------
-# General settings
-# ----------------------------------
-### Environment variables
 export LANG=ja_JP.UTF-8
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export JAVA_HOME=`/usr/libexec/java_home -v '1.8*'`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export PATH="$HOME/.rbenv/shims:$PATH" # rbenv
@@ -16,7 +12,7 @@ alias ll="ls -l"
 alias la="ls -a"
 alias cl="clear"
 
-### Command histroy
+### History
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
@@ -32,12 +28,6 @@ compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:sudo:*' command^path /usr/local/sbin /usr/localbin /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
-
-# ----------------------------------
-# Look and feel settings
-# ----------------------------------
-setopt print_eight_bit
-setopt no_beep
 
 ### PROMPT
 autoload -Uz colors
@@ -58,4 +48,8 @@ RPROMPT='${vcs_info_msg_0_}'
 ### Directry colors
 export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
+
+### Look and feel
+setopt print_eight_bit
+setopt no_beep
 
