@@ -96,10 +96,6 @@ NeoBundle 'Shougo/neosnippet-snippets'
   " SuperTab like snippets behavior.
   imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
   smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-  " For snippet_complete marker.
-  if has('conceal')
-    set conceallevel=2 concealcursor=niv
-  endif
 
 NeoBundle 'Shougo/neocomplete.vim'
   let g:neocomplete#enable_at_startup = 1
