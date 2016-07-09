@@ -1,9 +1,8 @@
 export LANG=ja_JP.UTF-8
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-export JAVA_HOME=`/usr/libexec/java_home -v '1.8*'`
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export PATH="$HOME/.rbenv/shims:$PATH" # rbenv
-export PATH="$HOME/.pyenv/shims:$PATH" # pyenv
+export JAVA_HOME=`/usr/libexec/java_home -- v '1.*'`
+export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="$HOME/.pyenv/shims:$PATH"
 
 ### Alias
 alias ls="ls -GF"
