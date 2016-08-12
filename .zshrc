@@ -6,7 +6,6 @@ export PATH="$HOME/.pyenv/shims:$PATH"
 
 ### Alias
 alias ls="ls -GF"
-alias gs="git status"
 alias ll="ls -l"
 alias la="ls -a"
 alias cl="clear"
