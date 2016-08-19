@@ -120,6 +120,7 @@ NeoBundle 'plasticboy/vim-markdown'
   let g:vim_markdown_folding_disabled=1
 NeoBundle 'naberon/vim-cakehtml' "For CakePHP
   autocmd BufNewFile,BufRead *.ctp set filetype=htmlcake
+NeoBundle 'kchmck/vim-coffee-script'
 
 """ Web
 NeoBundle 'mattn/webapi-vim'
