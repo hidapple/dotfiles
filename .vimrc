@@ -38,11 +38,11 @@ set formatoptions+=mM
 """ Syntax Color
 syntax on
 colorscheme molokai
-" colorscheme monokai
-" colorscheme hybrid
 set t_Co=256
 
-""" Keymap
+"================================
+" Key mapping
+"================================
 inoremap { {}<LEFT>
 inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
@@ -57,82 +57,33 @@ noremap s+ <C-w>+
 noremap s- <C-w>-
 
 "================================
-" Neobundle Settings
+" Dein.vim
 "================================
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+let s:dein_dir = expand('~/.cache/dein')
+let s:dein_repo_dir = s:dein_dir . '/repo/github.com/Shougo/dein.vim'
+
+""" Clone Dein.vim if needed
+if &runtimepath !~# '/dein.vim'
+  if !isdirectory(s:dein_repo_dir)
+    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+  endif
+  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 endif
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
+""" Dein.vim setting
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
 
-NeoBundle 'tyru/caw.vim.git'
-  nmap <C-_> <Plug>(caw:i:toggle)
-  vmap <C-_> <Plug>(caw:i:toggle)
-NeoBundle 'surround.vim'
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
-  nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
-  nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-  nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
-  nnoremap <silent> ,um :<C-u>Unite file_mru<CR>
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'thinca/vim-quickrun'
-  let g:quickrun_config = {
-\   '_' : {
-\     'outputter/buffer/close_on_empty' : 1
-\   }
-\ }
+  let g:rc_dir    = expand('~/.dotfiles/rc')
+  let s:toml      = g:rc_dir . '/dein.toml'
+  call dein#load_toml(s:toml, {'lazy': 0})
 
-""" Snippet
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-  " Plugin key-mappings.
-  imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-  smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-  xmap <C-k>     <Plug>(neosnippet_expand_target)
-  " SuperTab like snippets behavior.
-  imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-  smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+  call dein#end()
+  call dein#save_state()
+endif
 
-NeoBundle 'Shougo/neocomplete.vim'
-  let g:neocomplete#enable_at_startup = 1
-  let g:neocomplete#enable_ignore_case = 1
-  let g:neocomplete#enable_smart_case = 1
-  if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
-  endif
-  let g:neocomplete#keyword_patterns._ = '\h\w*'
-  inoremap <expr><TAB>   pumvisible() ? "\<C-n>" : "\<TAB>"
-  inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+""" Check not installed plugins
+if dein#check_install()
+  call dein#install()
+endif
 
-NeoBundle 'mattn/emmet-vim'
-  let g:user_emmet_leader_key='<C-e>'
-  let g:user_emmet_settings={ 'lang' : 'ja' }
-
-""" Langages
-NeoBundle 'StanAngeloff/php.vim'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'plasticboy/vim-markdown'
-  let g:vim_markdown_folding_disabled=1
-NeoBundle 'naberon/vim-cakehtml' "For CakePHP
-  autocmd BufNewFile,BufRead *.ctp set filetype=htmlcake
-NeoBundle 'kchmck/vim-coffee-script'
-
-""" Web
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'kannokanno/previm'
-NeoBundle 'tyru/open-browser.vim'
-  let g:netrw_nogx = 1 " disable netrw's gx mapping.
-  nmap gx <Plug>(openbrowser-smart-search)
-  vmap gx <Plug>(openbrowser-smart-search)
-
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
-
-NeoBundleCheck
