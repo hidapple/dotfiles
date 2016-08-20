@@ -76,7 +76,9 @@ if dein#load_state(s:dein_dir)
 
   let g:rc_dir    = expand('~/.dotfiles/rc')
   let s:toml      = g:rc_dir . '/dein.toml'
-  call dein#load_toml(s:toml, {'lazy': 0})
+  let s:toml_lazy = g:rc_dir . '/dein_lazy.toml'
+  call dein#load_toml(s:toml,      {'lazy': 0})
+  call dein#load_toml(s:toml_lazy, {'lazy': 1})
 
   call dein#end()
   call dein#save_state()
