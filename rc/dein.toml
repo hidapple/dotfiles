@@ -52,6 +52,10 @@ hook_add = '''
   vmap gx <Plug>(openbrowser-smart-search)
 '''
 
+### Color scheme
+[[plugins]]
+repo = 'tomasr/molokai'
+
 ### Languages Support ###
 [[plugins]]
 repo = 'cespare/vim-toml'
