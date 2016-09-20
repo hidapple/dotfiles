@@ -34,8 +34,10 @@ endif
 "================================
 " Basic Settings
 "================================
+filetype plugin indent on
+
 """ Color Scheme
-syntax on
+syntax enable
 colorscheme molokai
 set t_Co=256
 
