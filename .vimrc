@@ -26,7 +26,6 @@ if dein#load_state(s:dein_dir)
   call dein#save_state()
 endif
 
-""" Check not installed plugins
 if dein#check_install()
   call dein#install()
 endif
@@ -74,6 +73,12 @@ set backspace=indent,eol,start
 set noswapfile
 set nobackup
 set formatoptions+=mM
+
+""" When editing a file, always jump to the last cursor position
+augroup jumpPos
+  au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
+  \ exe "normal g`\"" | endif
+augroup END
 
 "================================
 " Key mapping
