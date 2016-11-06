@@ -1,13 +1,13 @@
 export LANG=ja_JP.UTF-8
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export JAVA_HOME=`/usr/libexec/java_home -- v '1.*'`
+export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="$HOME/.pyenv/shims:$PATH"
 
 ### Alias
 alias ls="ls -GF"
 alias ll="ls -l"
-alias la="ls -a"
 alias cl="clear"
 
 ### History

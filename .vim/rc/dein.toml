@@ -15,21 +15,7 @@ repo = 'surround.vim'
 repo = 'tpope/vim-endwise'
 
 [[plugins]]
-repo = 'Shougo/unite.vim'
-depends = 'neomru.vim'
-
-[[plugins]]
 repo = 'tpope/vim-rails'
-
-[[plugins]]
-repo = 'thinca/vim-quickrun'
-hook_add = '''
-  let g:quickrun_config = {
-\   '_' : {
-\     'outputter/buffer/close_on_empty' : 1
-\   }
-\ }
-'''
 
 [[plugins]]
 repo =  'mattn/emmet-vim'
@@ -40,17 +26,6 @@ hook_add = '''
 
 [[plugins]]
 repo = 'mattn/webapi-vim'
-
-[[plugins]]
-repo = 'kannokanno/previm'
-
-[[plugins]]
-repo = 'tyru/open-browser.vim'
-hook_add = '''
-  let g:netrw_nogx = 1
-  nmap gx <Plug>(openbrowser-smart-search)
-  vmap gx <Plug>(openbrowser-smart-search)
-'''
 
 ### Color scheme
 [[plugins]]
