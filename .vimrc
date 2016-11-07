@@ -1,7 +1,12 @@
+" ===============================
+" neovim
+" ===============================
+let g:python_host_prog = expand('~/.pyenv/versions/2.7.9/bin/python')
+let g:python3_host_prog = expand('~/.pyenv/shims/python')
+
 "================================
 " Dein.vim
 "================================
-let g:python3_host_prog = expand('~/.pyenv/shims/python')
 let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repo_dir = s:dein_dir . '/repo/github.com/Shougo/dein.vim'
 
@@ -17,11 +22,8 @@ endif
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
 
-  let g:rc_dir    = expand('~/.vim/rc')
-  let s:toml      = g:rc_dir . '/dein.toml'
-  let s:toml_lazy = g:rc_dir . '/dein_lazy.toml'
-  call dein#load_toml(s:toml,      {'lazy': 0})
-  call dein#load_toml(s:toml_lazy, {'lazy': 1})
+  call dein#load_toml('~/.vim/rc/dein.toml', {'lazy': 0})
+  call dein#load_toml('~/.vim/rc/dein_lazy.toml', {'lazy': 1})
 
   call dein#end()
   call dein#save_state()
