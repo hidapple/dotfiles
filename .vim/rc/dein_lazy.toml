@@ -11,9 +11,13 @@ hook_add = '''
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 on_cmd = 'Denite'
-# hook_source = '''
-#   source ~/.vim/rc/plugins/denite.rc.nvim
-# '''
+on_event = 'BufRead'
+hook_add = '''
+  noremap <silent> ,df :<C-u>Denite file_rec<CR>
+  noremap <silent> ,db :<C-u>Denite buffer<CR>
+  noremap <silent> ,dg :<C-u>Denite grep<CR>
+  noremap <silent> ,dl :<C-u>Denite line<CR>
+'''
 
 [[plugins]]
 repo = 'Shougo/neomru.vim'

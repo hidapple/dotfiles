@@ -19,17 +19,20 @@ if &runtimepath !~# '/dein.vim'
 endif
 
 """ Dein.vim setting
+let s:toml_file = '~/.vim/rc/dein.toml'
+let s:toml_lazy = '~/.vim/rc/dein_lazy.toml'
 if dein#load_state(s:dein_dir)
-  call dein#begin(s:dein_dir)
+  call dein#begin(s:dein_dir, [s:toml_file, s:toml_lazy])
 
-  call dein#load_toml('~/.vim/rc/dein.toml', {'lazy': 0})
-  call dein#load_toml('~/.vim/rc/dein_lazy.toml', {'lazy': 1})
+  """ Load plugins
+  call dein#load_toml(s:toml_file, {'lazy': 0})
+  call dein#load_toml(s:toml_lazy, {'lazy': 1})
 
   call dein#end()
   call dein#save_state()
 endif
 
-if dein#check_install()
+if has('vim_starting') && dein#check_install()
   call dein#install()
 endif
 
