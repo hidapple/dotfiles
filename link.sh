@@ -8,7 +8,7 @@ do
 done
 
 # For neovim
-mkdir $XDG_CONFIG_HOME/nvim
+mkdir -p $XDG_CONFIG_HOME/nvim
 ln -snv ~/.vim $XDG_CONFIG_HOME/nvim
 ln -snv ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
 
