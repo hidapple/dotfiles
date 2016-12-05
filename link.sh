@@ -1,8 +1,9 @@
 #!/bin/sh
+cd `dirname $0`
 for f in .??*
 do
-  [[ $f == ".git" ]] && continue
-  [[ $f == ".DS_Store" ]] && continue
+  if [ $f == ".git" ]; then continue; fi
+  if [ $f == ".DS_Store" ]; then continue; fi
 
   ln -snv ~/.dotfiles/$f ~/$f
 done
