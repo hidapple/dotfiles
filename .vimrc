@@ -73,6 +73,7 @@ set statusline+=%{'['.(&fenc!=''?&fenc:&enc).']['.&fileformat.']'}
 set statusline+=%=%l/%L,%c%V%8P
 set smartcase
 set incsearch
+set hlsearch
 set wrapscan
 set backspace=indent,eol,start
 set noswapfile
@@ -100,4 +101,5 @@ noremap s> <C-w>>
 noremap s< <C-w><
 noremap s+ <C-w>+
 noremap s- <C-w>-
+noremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
