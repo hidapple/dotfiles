@@ -79,6 +79,7 @@ set backspace=indent,eol,start
 set noswapfile
 set nobackup
 set formatoptions+=mM
+set clipboard+=unnamed
 
 """ When editing a file, always jump to the last cursor position
 augroup jumpPos
