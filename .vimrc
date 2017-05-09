@@ -40,6 +40,7 @@ endif
 " Basic Settings
 "================================
 filetype plugin indent on
+source $VIMRUNTIME/macros/matchit.vim
 
 """ Color Scheme
 syntax enable
