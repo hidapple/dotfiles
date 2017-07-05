@@ -4,10 +4,12 @@
   whitespace = cr-at-eol
 [alias]
   graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
-  st    = status
-  br    = branch
-  co    = checkout
+  st = status
+  br = branch
+  co = checkout
 [push]
   default = simple
 [include]
   path = ~/.gitconfig.local
+[ghq]
+  root = ~/ghq
