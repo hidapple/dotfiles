@@ -8,8 +8,11 @@ do
   ln -snv ~/.dotfiles/$f ~/$f
 done
 
-# For neovim
+# neovim
 mkdir -p $XDG_CONFIG_HOME/nvim
 ln -snv ~/.vim $XDG_CONFIG_HOME/nvim
 ln -snv ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
+
+# peco
+ln -snv ~/.dotfiles/peco/config.json $XDG_CONFIG_HOME/peco/config.json
 
