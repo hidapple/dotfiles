@@ -55,3 +55,15 @@ zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'c
 setopt print_eight_bit
 setopt no_beep
 
+### Register keybinds
+# Change directory to selected ghq repoitory with peco: Ctrl-g
+function peco-ghq() {
+  local dest_dir=$(ghq list --full-path | peco --query "${LBUFFER}")
+  if [ -n "${dest_dir}" ]; then
+    BUFFER="cd ${dest_dir}"
+    zle accept-line
+  fi
+}
+zle -N peco-ghq
+bindkey '^g' peco-ghq
+
