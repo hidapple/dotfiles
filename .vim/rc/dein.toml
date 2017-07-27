@@ -67,3 +67,6 @@ repo = 'kchmck/vim-coffee-script'
 [[plugins]]
 repo = 'groenewege/vim-less'
 
+[[plugins]]
+repo = 'fatih/vim-go'
+
