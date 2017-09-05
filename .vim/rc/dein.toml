@@ -19,6 +19,9 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = "benjie/neomake-local-eslint.vim"
+
+[[plugins]]
 repo = 'surround.vim'
 
 [[plugins]]
