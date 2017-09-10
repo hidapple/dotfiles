@@ -24,7 +24,6 @@ let s:toml_lazy = '~/.vim/rc/dein_lazy.toml'
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir, [s:toml_file, s:toml_lazy])
 
-  """ Load plugins
   call dein#load_toml(s:toml_file, {'lazy': 0})
   call dein#load_toml(s:toml_lazy, {'lazy': 1})
 
@@ -37,18 +36,22 @@ if has('vim_starting') && dein#check_install()
 endif
 
 "================================
-" Basic Settings
+" Settings
 "================================
 filetype plugin indent on
-source $VIMRUNTIME/macros/matchit.vim
+set encoding=utf-8
+scriptencoding utf-8
 
 """ Color Scheme
 syntax enable
 colorscheme molokai
 set t_Co=256
 
-set encoding=utf-8
-scriptencoding utf-8
+""" Status Line
+set laststatus=2
+set noshowmode
+
+""" Indent
 set autoindent
 set smartindent
 set expandtab
@@ -58,6 +61,8 @@ set shiftwidth=2
     autocmd! FileType php  setlocal shiftwidth=4 tabstop=4
     autocmd! FileType c    setlocal shiftwidth=4 tabstop=4
   augroup END
+
+""" Options
 set relativenumber
 set number
 set title
@@ -68,10 +73,6 @@ set showmatch
 set list
 set listchars=tab:»-,trail:_,extends:»,precedes:«
 set visualbell t_vb=
-set laststatus=2
-set statusline=%<%f\ %m%r%h%w
-set statusline+=%{'['.(&fenc!=''?&fenc:&enc).']['.&fileformat.']'}
-set statusline+=%=%l/%L,%c%V%8P
 set smartcase
 set incsearch
 set hlsearch
@@ -80,6 +81,8 @@ set backspace=indent,eol,start
 set noswapfile
 set nobackup
 set formatoptions+=mM
+
+source $VIMRUNTIME/macros/matchit.vim
 
 """ When editing a file, always jump to the last cursor position
 augroup jumpPos

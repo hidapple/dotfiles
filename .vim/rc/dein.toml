@@ -64,3 +64,11 @@ repo = 'mattn/webapi-vim'
 [[plugins]]
 repo = 'tomasr/molokai'
 
+### Statusline
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+  let g:lightline = {
+\   'colorscheme': 'wombat'
+\ }
+'''
