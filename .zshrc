@@ -34,18 +34,19 @@ zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 ### PROMPT
 autoload -Uz colors
 colors
-PROMPT="%F{green}%n@%m%f %F{yellow}[%~]%f
-%# "
 
 autoload -Uz vcs_info
 setopt prompt_subst
 zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' formats "%F{green}%c%u[%b]%f"
-zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
-zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:git:*' formats "%K{black} %c%u%b %k%f"
+zstyle ':vcs_info:git:*' stagedstr "%F{green}*"
+zstyle ':vcs_info:git:*' unstagedstr "%F{yellow}+"
 zstyle ':vcs_info:git:*' actionformats '[%b | %a]'
 precmd () { vcs_info }
-RPROMPT='${vcs_info_msg_0_}'
+
+PROMPT='%F{blue}%~%f ${vcs_info_msg_0_}
+%F{magenta}>%f '
+
 
 ### Directry colors
 export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
