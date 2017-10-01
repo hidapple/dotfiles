@@ -1,5 +1,5 @@
 # dotfiles
-Configuration files for Unix tools
+Configuration files for Unix tools.
 
 ## Install
 Clone into `~/.dotfiles`.
@@ -7,7 +7,7 @@ Clone into `~/.dotfiles`.
 $ git clone https://github.com/hidapple/dotfiles.git ~/.dotfiles
 ```
 
-Then execute link.sh to make symbolic links of each dotfiles.
+Then execute `link.sh` to make symbolic links of each dotfile.
 ```sh
 $ cd ~/.dotfiles
 $ sh link.sh
