@@ -55,7 +55,7 @@ set noshowmode
 set autoindent
 set smartindent
 set expandtab
-set tabstop=2
+set tabstop=4
 set shiftwidth=2
   augroup tabwidth
     autocmd! FileType php  setlocal shiftwidth=4 tabstop=4
@@ -71,7 +71,7 @@ set cursorline
 set cursorcolumn
 set showmatch
 set list
-set listchars=tab:»-,trail:_,extends:»,precedes:«
+set listchars=tab:\|\ ,trail:_,extends:»,precedes:«
 set visualbell t_vb=
 set smartcase
 set incsearch
