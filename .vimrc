@@ -55,7 +55,7 @@ set noshowmode
 set autoindent
 set smartindent
 set expandtab
-set tabstop=4
+set tabstop=2
 set shiftwidth=2
   augroup tabwidth
     autocmd! FileType php  setlocal shiftwidth=4 tabstop=4
