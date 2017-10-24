@@ -109,3 +109,7 @@ hook_source = '''
 repo = 'davidhalter/jedi-vim'
 on_ft = 'python'
 
+[[plugins]]
+repo = 'othree/yajs.vim'
+on_ft = 'javascript'
+
