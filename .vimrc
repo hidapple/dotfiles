@@ -106,4 +106,4 @@ noremap s< <C-w><
 noremap s+ <C-w>+
 noremap s- <C-w>-
 noremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
-
+noremap! <C-c> <Nop>
