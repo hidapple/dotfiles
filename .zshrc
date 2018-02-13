@@ -68,6 +68,6 @@ function peco-ghq() {
 zle -N peco-ghq
 bindkey '^g' peco-ghq
 
-### gtr - Trello command-line tool
-### https://github.com/hidapple/gtr
-[ -f ~/.gtr.sh ] && source ~/.gtr.sh
+### trl - Trello command-line tool
+### https://github.com/hidapple/trl
+[ -f ~/.trl.sh ] && source ~/.trl.sh
