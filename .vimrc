@@ -57,10 +57,10 @@ set smartindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
-  augroup tabwidth
-    autocmd! FileType php  setlocal shiftwidth=4 tabstop=4
-    autocmd! FileType c    setlocal shiftwidth=4 tabstop=4
-  augroup END
+augroup tabwidth
+  autocmd! FileType php  setlocal shiftwidth=4 tabstop=4
+  autocmd! FileType c    setlocal shiftwidth=4 tabstop=4
+augroup END
 
 """ Options
 set relativenumber
@@ -89,6 +89,9 @@ augroup jumpPos
   au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
   \ exe "normal g`\"" | endif
 augroup END
+
+""" Syntax for Vue.js
+autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
 
 "================================
 " Key mapping
