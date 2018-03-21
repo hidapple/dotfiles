@@ -91,7 +91,7 @@ augroup jumpPos
 augroup END
 
 """ Syntax for Vue.js
-autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
+autocmd BufNewFile,BufRead *.{html,htm,vue} set filetype=html
 
 "================================
 " Key mapping
