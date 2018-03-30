@@ -59,7 +59,7 @@ setopt no_beep
 ### Register keybinds
 # Change directory to selected ghq repoitory with peco: Ctrl-g
 function peco-ghq() {
-  local dest_dir=$(ghq list --full-path | peco --query "${LBUFFER}")
+  local dest_dir=$(ghq list --full-path | peco --prompt "REPO>" --query "${LBUFFER}")
   if [ -n "${dest_dir}" ]; then
     BUFFER="cd ${dest_dir}"
     zle accept-line
