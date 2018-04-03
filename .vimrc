@@ -80,7 +80,8 @@ set wrapscan
 set backspace=indent,eol,start
 set noswapfile
 set nobackup
-set formatoptions+=mMj
+set textwidth=80
+set formatoptions+=mMjtc
 
 source $VIMRUNTIME/macros/matchit.vim
 
