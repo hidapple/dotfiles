@@ -62,6 +62,9 @@ depends = 'open-browser.vim'
 [[plugins]]
 repo = 'mattn/webapi-vim'
 
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
 ### Color scheme
 [[plugins]]
 repo = 'tomasr/molokai'
