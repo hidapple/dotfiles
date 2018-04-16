@@ -81,7 +81,7 @@ set backspace=indent,eol,start
 set noswapfile
 set nobackup
 set textwidth=80
-set formatoptions+=mMjtc
+set formatoptions+=mMj
 
 source $VIMRUNTIME/macros/matchit.vim
 
