@@ -58,8 +58,8 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 augroup tabwidth
-  autocmd! FileType php  setlocal shiftwidth=4 tabstop=4
-  autocmd! FileType c    setlocal shiftwidth=4 tabstop=4
+  autocmd! FileType php setlocal shiftwidth=4 tabstop=4
+  autocmd! FileType c   setlocal shiftwidth=4 tabstop=4
 augroup END
 
 """ Options
@@ -80,8 +80,10 @@ set wrapscan
 set backspace=indent,eol,start
 set noswapfile
 set nobackup
-set textwidth=80
 set formatoptions+=mMj
+augroup textwidth
+  autocmd! FileType go setlocal textwidth=80
+augroup END
 
 source $VIMRUNTIME/macros/matchit.vim
 
