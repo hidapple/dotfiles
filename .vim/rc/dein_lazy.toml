@@ -69,6 +69,20 @@ add_hook = '''
 ### Languages Support ###
 [[plugins]]
 repo = 'sheerun/vim-polyglot'
+add_hook = '''
+  let g:polyglot_disabled = ['markdown']
+'''
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+on_ft = ['markdown', 'mkd']
+hook_add = '''
+  let g:vim_markdown_folding_disabled=1
+'''
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
 
 [[plugins]]
 repo = 'fatih/vim-go'
