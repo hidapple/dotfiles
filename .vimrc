@@ -89,8 +89,9 @@ augroup jumpPos
   \ exe "normal g`\"" | endif
 augroup END
 
-""" Syntax for Vue.js
+""" Filetype detection
 autocmd BufNewFile,BufRead *.{html,htm,vue} set filetype=html
+autocmd BufNewFile,BufRead Jenkinsfile*     set filetype=groovy
 
 "================================
 " Key mapping
