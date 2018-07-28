@@ -13,6 +13,7 @@ export PATH="$PATH:$GOROOT/bin"
 alias ls="ls -GF"
 alias ll="ls -l"
 alias cl="clear"
+alias vim="nvim"
 
 ### History
 HISTFILE=~/.zsh_history
