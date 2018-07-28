@@ -1,22 +1,12 @@
 [[plugins]]
 repo = 'Shougo/neomru.vim'
-on_source = ['unite.vim', 'denite.nvim']
+on_source = ['denite.nvim']
 
 [[plugins]]
 repo = 'Shougo/neoyank.vim'
 on_if = 1
 on_event = 'TextYankPost'
-on_source = ['unite.vim', 'denite.nvim']
-
-[[plugins]]
-repo = 'Shougo/unite.vim'
-depends = 'neomru.vim'
-hook_add = '''
-  nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
-  nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-  nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
-  nnoremap <silent> ,um :<C-u>Unite file_mru<CR>
-'''
+on_source = ['denite.nvim']
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
