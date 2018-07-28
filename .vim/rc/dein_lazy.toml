@@ -81,6 +81,10 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'dhruvasagar/vim-table-mode'
+on_ft = ['markdown', 'mkd']
+
+[[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
