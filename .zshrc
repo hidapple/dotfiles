@@ -20,7 +20,6 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 setopt extended_history
-function histroy_all {histroy-E1}
 setopt share_history
 setopt hist_ignore_all_dups
 setopt hist_no_store
