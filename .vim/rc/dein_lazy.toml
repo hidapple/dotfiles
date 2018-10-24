@@ -12,12 +12,12 @@ on_source = ['denite.nvim']
 repo = 'Shougo/denite.nvim'
 depends = 'neomru.vim'
 hook_add = '''
-  noremap <silent> ,df :<C-u>Denite file_rec<CR>
-  noremap <silent> ,db :<C-u>Denite buffer<CR>
-  noremap <silent> ,dg :<C-u>Denite grep<CR>
-  noremap <silent> ,dl :<C-u>Denite line<CR>
-  noremap <silent> ,dy :<C-u>Denite neoyank<CR>
-  noremap <silent> ,dm :<C-u>Denite file_mru<CR>
+  noremap <silent> ,df :<C-u>Denite file_rec -highlight-mode-insert=Search<CR>
+  noremap <silent> ,db :<C-u>Denite buffer   -highlight-mode-insert=Search<CR>
+  noremap <silent> ,dg :<C-u>Denite grep     -highlight-mode-insert=Search<CR>
+  noremap <silent> ,dl :<C-u>Denite line     -highlight-mode-insert=Search<CR>
+  noremap <silent> ,dy :<C-u>Denite neoyank  -highlight-mode-insert=Search<CR>
+  noremap <silent> ,dm :<C-u>Denite file_mru -highlight-mode-insert=Search<CR>
 '''
 hook_post_source = '''
   call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
