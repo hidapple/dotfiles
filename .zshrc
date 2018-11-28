@@ -68,6 +68,17 @@ function peco-ghq() {
 zle -N peco-ghq
 bindkey '^g' peco-ghq
 
+# Select command from history and exec
+function peco-history() {
+  local hist_idx=$(history | peco --prompt "HIST>" | awk '{ print $1 }')
+  if [ -n "${hist_idx}" ]; then
+    BUFFER="!$hist_idx"
+    zle accept-line
+  fi
+}
+zle -N peco-history
+bindkey '^h' peco-history
+
 ### trl - Trello command-line tool
 ### https://github.com/hidapple/trl
 [ -f ~/.trl.sh ] && source ~/.trl.sh
