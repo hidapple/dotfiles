@@ -1,14 +1,14 @@
 export LANG=ja_JP.UTF-8
-export JAVA_HOME=`/usr/libexec/java_home -- v '1.*'`
-export GOPATH="$HOME/dev"
-export GOROOT=`go env GOROOT`
-export XDG_CONFIG_HOME="$HOME/.config"
 export PATH=/usr/local/bin:/usr/local/go/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="$HOME/.pyenv/shims:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$GOROOT/bin"
 export EDITOR="vim"
+export JAVA_HOME=`/usr/libexec/java_home -- v '1.*'`
+export GOPATH="$HOME/dev"
+export GOROOT=`go env GOROOT`
+export XDG_CONFIG_HOME="$HOME/.config"
 
 ### Alias
 alias ls="ls -GF"
