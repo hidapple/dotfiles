@@ -78,7 +78,7 @@ set noswapfile
 set nobackup
 set formatoptions+=mMj
 augroup textwidth
-  autocmd! FileType go setlocal textwidth=80
+  autocmd! FileType go setlocal textwidth=100
 augroup END
 
 source $VIMRUNTIME/macros/matchit.vim
