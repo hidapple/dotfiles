@@ -90,7 +90,7 @@ augroup jumpPos
 augroup END
 
 """ Filetype detection
-autocmd BufNewFile,BufRead *.{html,htm,vue} set filetype=html
+autocmd BufNewFile,BufRead *.{html,htm} set filetype=html
 autocmd BufNewFile,BufRead Jenkinsfile*     set filetype=groovy
 
 "================================
