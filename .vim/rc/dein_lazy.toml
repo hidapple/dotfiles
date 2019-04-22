@@ -64,3 +64,7 @@ hook_source = '''
 repo = 'davidhalter/jedi-vim'
 on_ft = 'python'
 
+[[plugins]]
+repo = 'posva/vim-vue'
+on_ft = 'vue'
+
