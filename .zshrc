@@ -25,6 +25,7 @@ setopt extended_history
 setopt share_history
 setopt hist_ignore_all_dups
 setopt hist_no_store
+setopt correct
 
 ### Completion
 autoload -Uz compinit
@@ -49,7 +50,6 @@ precmd () { vcs_info }
 PROMPT='%F{blue}%~%f ${vcs_info_msg_0_}
 %F{magenta}>%f '
 
-
 ### Directry colors
 export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
@@ -69,10 +69,6 @@ function peco-ghq() {
 }
 zle -N peco-ghq
 bindkey '^g' peco-ghq
-
-### trl - Trello command-line tool
-### https://github.com/hidapple/trl
-[ -f ~/.trl.sh ] && source ~/.trl.sh
 
 ### direnv - Unclutter your .profile
 ### https://github.com/zimbatm/direnv
