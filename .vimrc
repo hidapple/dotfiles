@@ -91,7 +91,7 @@ augroup END
 
 """ Filetype detection
 autocmd BufNewFile,BufRead *.{html,htm} set filetype=html
-autocmd BufNewFile,BufRead Jenkinsfile*     set filetype=groovy
+autocmd BufNewFile,BufRead Jenkinsfile* set filetype=groovy
 
 "================================
 " Key mapping
@@ -109,4 +109,5 @@ noremap s< <C-w><
 noremap s+ <C-w>+
 noremap s- <C-w>-
 noremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
-noremap! <C-c> <Nop>
+map <C-n> :cnext<CR>
+map <C-m> :cprevious><CR>
