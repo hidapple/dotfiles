@@ -8,25 +8,71 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+hook_add = '''
+" https://github.com/junegunn/fzf/blob/master/README-VIM.md
+
+" Key bindings
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+" Layout - down / up / left / right
+let g:fzf_layout = { 'down': '~40%' }
+
+" You can set up fzf window using a Vim command (Neovim or latest Vim 8 required)
+let g:fzf_layout = { 'window': 'enew' }
+let g:fzf_layout = { 'window': '-tabnew' }
+let g:fzf_layout = { 'window': '10new' }
+
+" Customize fzf colors to match your color scheme
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+" Enable per-command history.
+" CTRL-N and CTRL-P will be automatically bound to next-history and
+" previous-history instead of down and up. If you don't like the change,
+" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+'''
+
+[[plugins]]
 repo = 'ujihisa/neco-look'
 
 [[plugins]]
 repo = 'tyru/caw.vim.git'
 hook_add = '''
-  nmap <C-_> <Plug>(caw:hatpos:toggle)
-  vmap <C-_> <Plug>(caw:hatpos:toggle)
+nmap <C-_> <Plug>(caw:hatpos:toggle)
+vmap <C-_> <Plug>(caw:hatpos:toggle)
 '''
 
 [[plugins]]
 repo = 'neomake/neomake'
 hook_add = '''
-  autocmd! BufWritePost * Neomake
-  let g:neomake_python_enabled_makers = ['python', 'flake8']
-  let g:neomake_javascript_enabled_makers = ['eslint']
-  let g:neomake_go_enabled_malers = ['golint', 'govet']
+autocmd! BufWritePost * Neomake
+let g:neomake_python_enabled_makers = ['python', 'flake8']
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_go_enabled_malers = ['golint', 'govet']
 
-  let g:neomake_error_sign = {'text': '✖', 'texthl': 'Repeat'}
-  let g:neomake_warning_sign = {'text': '⚠', 'texthl': 'QuickFixLine'}
+let g:neomake_error_sign = {'text': 'X', 'texthl': 'Repeat'}
+let g:neomake_warning_sign = {'text': '!', 'texthl': 'QuickFixLine'}
 '''
 
 [[plugins]]
@@ -41,26 +87,25 @@ repo = 'tpope/vim-endwise'
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 hook_add = '''
-  let g:quickrun_config = {
-\   '_' : {
-\     'outputter/buffer/close_on_empty' : 1
-\   }
+let g:quickrun_config =
+\ {
+\   '_' : { 'outputter/buffer/close_on_empty' : 1 }
 \ }
 '''
 
 [[plugins]]
 repo =  'mattn/emmet-vim'
 hook_add = '''
-  let g:user_emmet_leader_key='<C-e>'
-  let g:user_emmet_settings={ 'lang' : 'ja' }
+let g:user_emmet_leader_key='<C-e>'
+let g:user_emmet_settings={ 'lang' : 'ja' }
 '''
 
 [[plugins]]
 repo = 'tyru/open-browser.vim'
 hook_add = '''
-  let g:netrw_nogx = 1
-  nmap gx <Plug>(openbrowser-smart-search)
-  vmap gx <Plug>(openbrowser-smart-search)
+let g:netrw_nogx = 1
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
 '''
 
 [[plugins]]
@@ -82,7 +127,5 @@ repo = 'tomasr/molokai'
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
-  let g:lightline = {
-\   'colorscheme': 'wombat'
-\ }
+let g:lightline = { 'colorscheme': 'wombat' }
 '''

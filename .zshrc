@@ -73,3 +73,5 @@ bindkey '^g' peco-ghq
 ### direnv - Unclutter your .profile
 ### https://github.com/zimbatm/direnv
 eval "$(direnv hook zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
