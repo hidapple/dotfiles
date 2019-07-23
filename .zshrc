@@ -1,5 +1,5 @@
 export LANG=ja_JP.UTF-8
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin
 export JAVA_HOME=`/usr/libexec/java_home -- v '1.*'`
 export GOPATH="$HOME/go"
 export GOROOT=`go env GOROOT`
@@ -74,4 +74,6 @@ bindkey '^g' peco-ghq
 ### https://github.com/zimbatm/direnv
 eval "$(direnv hook zsh)"
 
+### Load external source
+[ -f ~/.zshrc.local] && source ~/.zshrc.local
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
