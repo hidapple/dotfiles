@@ -74,24 +74,26 @@ set incsearch
 set hlsearch
 set wrapscan
 set backspace=indent,eol,start
-set noswapfile
-set nobackup
 set formatoptions+=mMj
-augroup textwidth
-  autocmd! FileType go setlocal textwidth=100
-augroup END
 
+""" Extend % matching
 source $VIMRUNTIME/macros/matchit.vim
 
-""" When editing a file, always jump to the last cursor position
+""" Jump to the last cursor position with file open
 augroup jumpPos
-  au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
+  autocmd BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
   \ exe "normal g`\"" | endif
 augroup END
 
-""" Filetype detection
-autocmd BufNewFile,BufRead *.{html,htm} set filetype=html
-autocmd BufNewFile,BufRead Jenkinsfile* set filetype=groovy
+"================================
+" Filetype
+"================================
+augroup ftype
+  autocmd BufNewFile,BufRead *.{html,htm} set filetype=html
+  autocmd BufNewFile,BufRead Jenkinsfile* set filetype=groovy
+  autocmd BufNewFile,BufRead .tmux.conf set filetype=tmux
+  autocmd FileType go setlocal textwidth=100
+augroup END
 
 "================================
 " Key mapping
@@ -110,4 +112,4 @@ noremap s+ <C-w>+
 noremap s- <C-w>-
 noremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 map <C-n> :cnext<CR>
-map <C-m> :cprevious><CR>
+map <C-m> :cprevious<CR>
