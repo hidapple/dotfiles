@@ -3,6 +3,7 @@
   whitespace = cr-at-eol
 [alias]
   graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
+  rm-merged-br = !git branch --merged | grep -v \\* | xargs -I {} git branch -d {}
   st = status
   br = branch
   co = checkout
