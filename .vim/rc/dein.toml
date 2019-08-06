@@ -12,7 +12,7 @@ repo = 'ujihisa/neco-look'
 
 [[plugins]]
 repo = 'junegunn/fzf'
-build = './install --all'
+build = './install --bin'
 
 [[plugins]]
 repo = 'junegunn/fzf.vim'
