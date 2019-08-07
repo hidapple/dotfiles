@@ -33,8 +33,8 @@ on_ft = 'go'
 hook_source = '''
 let g:go_fmt_command = 'goimports'
 
-"Key mapping
-nmap ,d :GoDecls<CR>
+" Key mapping
+nnoremap ,d :GoDecls<CR>
 '''
 
 [[plugins]]

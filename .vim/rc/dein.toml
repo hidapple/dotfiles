@@ -17,7 +17,7 @@ build = './install --bin'
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 hook_add = '''
-""" Layout - down / up / left / right
+" Layout - down / up / left / right
 let g:fzf_layout = { 'down': '~40%' }
 
 let g:fzf_colors =
@@ -34,6 +34,15 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
+
+" Override Files command to include dotfiles
+command! -bang -nargs=? -complete=dir Files
+\ call fzf#vim#files(<q-args>, { 'source': 'ag --hidden --ignore .git -g ""' }, <bang>0)
+
+" Key mapping
+nnoremap ,f  :Files<CR>
+nnoremap ,gf :GFiles<CR>
+nnoremap ,b  :Buffers<CR>
 '''
 
 [[plugins]]
