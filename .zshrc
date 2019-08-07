@@ -59,15 +59,15 @@ setopt no_beep
 
 ### Register keybinds
 # Change directory to selected ghq repoitory with peco: Ctrl-g
-function peco-ghq() {
-  local dest_dir=$(ghq list --full-path | peco --prompt "REPO>" --query "${LBUFFER}")
+function list-repos() {
+  local dest_dir=$(ghq list --full-path | fzf --query "${LBUFFER}")
   if [ -n "${dest_dir}" ]; then
     BUFFER="cd ${dest_dir}"
     zle accept-line
   fi
 }
-zle -N peco-ghq
-bindkey '^g' peco-ghq
+zle -N list-repos
+bindkey '^g' list-repos
 
 ### direnv - Unclutter your .profile
 ### https://github.com/zimbatm/direnv
