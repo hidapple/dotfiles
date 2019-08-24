@@ -58,7 +58,6 @@ hook_add = '''
 autocmd! BufWritePost * Neomake
 let g:neomake_python_enabled_makers = ['python', 'flake8']
 let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_go_enabled_makers = ['golint', 'govet']
 
 let g:neomake_error_sign = {'text': 'X', 'texthl': 'Repeat'}
 let g:neomake_warning_sign = {'text': '!', 'texthl': 'QuickFixLine'}
