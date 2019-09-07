@@ -9,7 +9,7 @@ do
 done
 
 # neovim
-if [ "$XDG_CONFIG_HOME" == "" ]; then export XDG_CONFIG_HOME=$HOME/.config; fi
+if [ "$XDG_CONFIG_HOME" == "" ]; then XDG_CONFIG_HOME=$HOME/.config; fi
 mkdir -p $XDG_CONFIG_HOME/nvim
 ln -snv ~/.vim $XDG_CONFIG_HOME/nvim
 ln -snv ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim

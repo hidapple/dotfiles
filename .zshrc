@@ -3,10 +3,7 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin
 export JAVA_HOME=`/usr/libexec/java_home -- v '1.*'`
 export GOPATH="$HOME/go"
 export XDG_CONFIG_HOME="$HOME/.config"
-export PATH="$HOME/.rbenv/shims:$PATH"
-export PATH="$HOME/.pyenv/shims:$PATH"
 export PATH="$PATH:$GOPATH/bin"
-
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
 
