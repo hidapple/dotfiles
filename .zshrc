@@ -15,6 +15,7 @@ alias ls="ls -GF"
 alias ll="ls -l"
 alias cl="clear"
 alias vim="nvim"
+alias docker-compose="dco"
 
 ### History
 HISTFILE=~/.zsh_history
