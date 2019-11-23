@@ -1,7 +1,6 @@
 [core]
   editor = nvim
   whitespace = cr-at-eol
-  excludesfile = ~/.gitignore
 [alias]
   graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
   rm-merged-br = !git branch --merged | grep -v \\* | xargs -I {} git branch -d {}
@@ -12,6 +11,7 @@
 [push]
   default = simple
 [include]
-  path = ~/.gitconfig.local
+  # ~/.config is $XDG_CONFIG_HOME
+  path = ~/.config/git/config.local
 [ghq]
   root = ~/dev/src
