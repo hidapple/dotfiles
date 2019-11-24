@@ -6,6 +6,7 @@ cd `dirname $0`
 for f in .??*
 do
   if [ $f == ".git" ]; then continue; fi
+  if [ $f == ".gitignore" ]; then continue; fi
   if [ $f == ".DS_Store" ]; then continue; fi
 
   ln -snv $DOT/$f $HOME/$f
