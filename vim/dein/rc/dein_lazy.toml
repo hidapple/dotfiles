@@ -53,4 +53,8 @@ on_ft = 'jsonnet'
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
-on_ft = 'ts'
+on_ft = ['typescript', 'typescript.tsx']
+
+[[plugins]]
+repo = 'hashivim/vim-terraform'
+on_ft = 'terraform'
