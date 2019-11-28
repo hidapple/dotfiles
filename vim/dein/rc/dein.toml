@@ -43,6 +43,7 @@ command! -bang -nargs=? -complete=dir Files
 nnoremap ,f  :Files<CR>
 nnoremap ,gf :GFiles<CR>
 nnoremap ,b  :Buffers<CR>
+nnoremap ,ag :Ag<CR>
 '''
 
 [[plugins]]
