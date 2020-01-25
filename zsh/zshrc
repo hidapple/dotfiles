@@ -8,7 +8,7 @@ export PATH="$HOME/.nodebrew/current/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
 
-export ANDROID_HOME="/Users/hidapple/Library/Android/sdk"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$ANDROID_HOME/platform-tools/bin:$PATH"
 
 # ----------------------
