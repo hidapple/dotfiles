@@ -44,7 +44,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:sudo:*' command^path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
-# Kubernates completion
+# Kubernetes completion
 source <(kubectl completion zsh)
 
 # ----------------------
@@ -88,7 +88,7 @@ setopt no_beep
 # ----------------------
 # Register keybinds
 # ----------------------
-# Change directory to selected ghq repoitory with peco: Ctrl-g
+# Change directory to selected ghq repoitory with fzf: Ctrl-g
 function list-repos() {
   local dest_dir=$(ghq list --full-path | fzf --query "${LBUFFER}" --reverse)
   if [ -n "${dest_dir}" ]; then
