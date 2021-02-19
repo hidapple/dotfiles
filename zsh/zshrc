@@ -44,9 +44,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:sudo:*' command^path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
-# Kubernetes completion
-source <(kubectl completion zsh)
-
 # ----------------------
 # PROMPT
 # ----------------------
@@ -62,17 +59,7 @@ zstyle ':vcs_info:git:*' unstagedstr "%F{yellow}+"
 zstyle ':vcs_info:git:*' actionformats '[%b | %a]'
 precmd () { vcs_info }
 
-# Kubernetes prompt configuration
-# TODO: Show prompt without using kube_ps1
-source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
-KUBE_PS1_PREFIX=""
-KUBE_PS1_SUFFIX=""
-KUBE_PS1_SEPARATOR=" "
-KUBE_PS1_DIVIDER=" > "
-KUBE_PS1_CTX_COLOR="white"
-KUBE_PS1_NS_COLOR="white"
-
-PROMPT='%F{blue}%~%f ${vcs_info_msg_0_} %K{black} $(kube_ps1) %k
+PROMPT='%F{blue}%~%f ${vcs_info_msg_0_}
 %F{magenta}>%f '
 
 # ----------------------
@@ -110,3 +97,4 @@ eval "$(direnv hook zsh)"
 # ----------------------
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.k8s.zsh ] && source ~/.k8s.zsh
