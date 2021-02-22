@@ -10,6 +10,8 @@
   cm = commit
 [push]
   default = simple
+[pull]
+  rebase = false
 [include]
   # ~/.config is $XDG_CONFIG_HOME
   path = ~/.config/git/config.local
