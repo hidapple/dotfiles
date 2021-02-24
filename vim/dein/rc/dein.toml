@@ -2,10 +2,16 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-hook_add = '''
-let g:deoplete#enable_at_startup = 1
+repo = 'sheerun/vim-polyglot'
+add_hook = '''
+let g:polyglot_disabled = ['markdown']
 '''
+
+# [[plugins]]
+# repo = 'Shougo/deoplete.nvim'
+# hook_add = '''
+# let g:deoplete#enable_at_startup = 1
+# '''
 
 [[plugins]]
 repo = 'ujihisa/neco-look'

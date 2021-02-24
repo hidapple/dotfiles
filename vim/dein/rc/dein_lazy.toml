@@ -7,12 +7,6 @@ depends = ['neosnippet']
 
 ### Languages Support
 [[plugins]]
-repo = 'sheerun/vim-polyglot'
-add_hook = '''
-let g:polyglot_disabled = ['markdown']
-'''
-
-[[plugins]]
 repo = 'plasticboy/vim-markdown'
 on_ft = ['markdown', 'mkd']
 hook_add = '''
