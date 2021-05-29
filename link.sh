@@ -19,15 +19,9 @@ ln -snv $DOT/zsh/fzf     $HOME/.fzf
 ln -snv $DOT/zsh/fzf.zsh $HOME/.fzf.zsh
 ln -snv $DOT/zsh/k8s.zsh $HOME/.k8s.zsh
 
-# vim
-# -----------
-ln -snv $DOT/vim/vimrc $HOME/.vimrc
-ln -snv $DOT/vim/dein  $HOME/.vim
-
 # neovim
 # -----------
-ln -snv $HOME/.vim   $XDG_CONFIG_HOME/nvim
-ln -snv $HOME/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
+ln -snv $DOT/vim/vimrc $XDG_CONFIG_HOME/nvim/init.vim
 
 # git
 # -----------
