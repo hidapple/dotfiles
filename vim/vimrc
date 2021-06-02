@@ -17,6 +17,10 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'vim-scripts/surround.vim'
 
+Plug 'tyru/caw.vim'
+nmap <C-_> <Plug>(caw:hatpos:toggle)
+vmap <C-_> <Plug>(caw:hatpos:toggle)
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 let g:fzf_layout = { 'down': '~40%' }
