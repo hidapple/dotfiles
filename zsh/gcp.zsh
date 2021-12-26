@@ -7,5 +7,4 @@ function set_gcp_project() {
     GCP_PROMPT="%K{black} gcp: $project_id %k"
   fi
 }
-autoload -Uz add-zsh-hook
 add-zsh-hook precmd set_gcp_project

@@ -11,4 +11,8 @@ KUBE_PS1_DIVIDER=" > "
 KUBE_PS1_CTX_COLOR="white"
 KUBE_PS1_NS_COLOR="white"
 
-KUBE_PROMPT="%K{black} $(kube_ps1) %k"
+function set_kube_prompt() {
+  KUBE_PROMPT="%K{black} $(kube_ps1) %k"
+}
+
+add-zsh-hook precmd set_kube_prompt
