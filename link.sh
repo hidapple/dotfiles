@@ -18,6 +18,7 @@ ln -snv $DOT/zsh/zshrc   $HOME/.zshrc
 ln -snv $DOT/zsh/fzf     $HOME/.fzf
 ln -snv $DOT/zsh/fzf.zsh $HOME/.fzf.zsh
 ln -snv $DOT/zsh/k8s.zsh $HOME/.k8s.zsh
+ln -snv $DOT/zsh/gcp.zsh $HOME/.gcp.zsh
 
 # neovim
 # -----------

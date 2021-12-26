@@ -11,5 +11,4 @@ KUBE_PS1_DIVIDER=" > "
 KUBE_PS1_CTX_COLOR="white"
 KUBE_PS1_NS_COLOR="white"
 
-PROMPT='%F{blue}%~%f ${vcs_info_msg_0_} %K{black} $(kube_ps1) %k
-%F{magenta}>%f '
+KUBE_PROMPT="%K{black} $(kube_ps1) %k"
