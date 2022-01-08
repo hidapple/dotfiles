@@ -22,6 +22,7 @@ ln -snv $DOT/zsh/gcp.zsh $HOME/.gcp.zsh
 
 # neovim
 # -----------
+mkdir -p $XDG_CONFIG_HOME/nvim
 ln -snv $DOT/vim/vimrc $XDG_CONFIG_HOME/nvim/init.vim
 
 # git
