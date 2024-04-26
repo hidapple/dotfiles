@@ -3,7 +3,7 @@ source <(kubectl completion zsh)
 
 # Kubernetes prompt configuration
 # TODO: Show prompt without using kube_ps1
-source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 KUBE_PS1_PREFIX=""
 KUBE_PS1_SUFFIX=""
 KUBE_PS1_SEPARATOR=" "
