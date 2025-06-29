@@ -122,9 +122,6 @@ set wrapscan
 set backspace=indent,eol,start
 set formatoptions+=mMj
 
-""" Extend % matching
-source $VIMRUNTIME/macros/matchit.vim
-
 """ Jump to the last cursor position with file open
 augroup jumpPos
   autocmd BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
