@@ -44,4 +44,3 @@ hs.hotkey.bind(prefix, "Right", function()
 
   window:setFrame(frame)
 end)
-

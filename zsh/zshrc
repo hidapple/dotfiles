@@ -20,7 +20,7 @@ alias k="kubectl"
 # ----------------------
 # History
 # ----------------------
-HISTFILE=~/.zsh_history
+HISTFILE=$ZDOTDIR/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 setopt extended_history
@@ -46,8 +46,8 @@ autoload -Uz add-zsh-hook
 autoload -Uz vcs_info
 autoload -Uz colors; colors
 
-[ -f ~/.k8s.zsh ] && source ~/.k8s.zsh # Define KUBE_PROMPT
-[ -f ~/.gcp.zsh ] && source ~/.gcp.zsh # Define GCP_PROMPT
+[ -f $ZDOTDIR/k8s.zsh ] && source $ZDOTDIR/k8s.zsh # Define KUBE_PROMPT
+[ -f $ZDOTDIR/gcp.zsh ] && source $ZDOTDIR/gcp.zsh # Define GCP_PROMPT
 
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' formats "%K{black} %c%u%b %k%f"
@@ -96,4 +96,4 @@ eval "$(direnv hook zsh)"
 # Load external source
 # ----------------------
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $ZDOTDIR/fzf.zsh ] && source $ZDOTDIR/fzf.zsh

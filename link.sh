@@ -14,11 +14,13 @@ done
 
 # zsh
 # -----------
-ln -snv $DOT/zsh/zshrc   $HOME/.zshrc
-ln -snv $DOT/zsh/fzf     $HOME/.fzf
-ln -snv $DOT/zsh/fzf.zsh $HOME/.fzf.zsh
-ln -snv $DOT/zsh/k8s.zsh $HOME/.k8s.zsh
-ln -snv $DOT/zsh/gcp.zsh $HOME/.gcp.zsh
+ln -snv $DOT/zsh/zshenv  $HOME/.zshenv
+mkdir -p $XDG_CONFIG_HOME/zsh
+ln -snv $DOT/zsh/zshrc   $XDG_CONFIG_HOME/zsh/.zshrc
+ln -snv $DOT/zsh/fzf     $XDG_CONFIG_HOME/zsh/fzf
+ln -snv $DOT/zsh/fzf.zsh $XDG_CONFIG_HOME/zsh/fzf.zsh
+ln -snv $DOT/zsh/k8s.zsh $XDG_CONFIG_HOME/zsh/k8s.zsh
+ln -snv $DOT/zsh/gcp.zsh $XDG_CONFIG_HOME/zsh/gcp.zsh
 
 # neovim
 # -----------
@@ -28,3 +30,12 @@ ln -snv $DOT/vim/vimrc $XDG_CONFIG_HOME/nvim/init.vim
 # git
 # -----------
 ln -snv $DOT/git $XDG_CONFIG_HOME/git
+
+# tmux
+# -----------
+ln -snv $DOT/tmux $XDG_CONFIG_HOME/tmux
+
+# hammerspoon
+# -----------
+ln -snv $DOT/hammerspoon $XDG_CONFIG_HOME/hammerspoon
+defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
