@@ -95,5 +95,5 @@ eval "$(direnv hook zsh)"
 # ----------------------
 # Load external source
 # ----------------------
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+[ -f $ZDOTDIR/.zshrc.local ] && source $ZDOTDIR/.zshrc.local
 [ -f $ZDOTDIR/fzf.zsh ] && source $ZDOTDIR/fzf.zsh
