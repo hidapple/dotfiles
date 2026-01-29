@@ -16,7 +16,7 @@ alias cl="clear"
 alias vim="nvim"
 alias docc="docker compose"
 alias k="kubectl"
-alias cc='tmux split-window --vertical --percentage 40 && tmux send-keys "claude" Enter'
+alias cc='tmux split-window -v -p 40 && tmux send-keys "claude" Enter'
 
 # ----------------------
 # History
