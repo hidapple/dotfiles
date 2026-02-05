@@ -39,3 +39,7 @@ ln -snv $DOT/tmux $XDG_CONFIG_HOME/tmux
 # -----------
 ln -snv $DOT/hammerspoon $XDG_CONFIG_HOME/hammerspoon
 defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
+
+# ghostty
+# -----------
+ln -snv $DOT/ghostty $XDG_CONFIG_HOME/ghostty
