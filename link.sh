@@ -12,20 +12,18 @@ do
   ln -snv $DOT/$f $HOME/$f
 done
 
-# zsh
+# fish
 # -----------
-ln -snv $DOT/zsh/zshenv  $HOME/.zshenv
-mkdir -p $XDG_CONFIG_HOME/zsh
-ln -snv $DOT/zsh/zshrc   $XDG_CONFIG_HOME/zsh/.zshrc
-ln -snv $DOT/zsh/fzf     $XDG_CONFIG_HOME/zsh/fzf
-ln -snv $DOT/zsh/fzf.zsh $XDG_CONFIG_HOME/zsh/fzf.zsh
-ln -snv $DOT/zsh/k8s.zsh $XDG_CONFIG_HOME/zsh/k8s.zsh
-ln -snv $DOT/zsh/gcp.zsh $XDG_CONFIG_HOME/zsh/gcp.zsh
+mkdir -p $XDG_CONFIG_HOME/fish
+ln -snv $DOT/fish/config.fish $XDG_CONFIG_HOME/fish/config.fish
+ln -snv $DOT/fish/functions   $XDG_CONFIG_HOME/fish/functions
+ln -snv $DOT/fish/conf.d      $XDG_CONFIG_HOME/fish/conf.d
 
 # neovim
 # -----------
 mkdir -p $XDG_CONFIG_HOME/nvim
 ln -snv $DOT/vim/vimrc $XDG_CONFIG_HOME/nvim/init.vim
+ln -snv $DOT/vim/coc-settings.json $XDG_CONFIG_HOME/nvim/coc-settings.json
 
 # git
 # -----------

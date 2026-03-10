@@ -1,0 +1,7 @@
+{
+  "rust-analyzer.imports.granularity.group": "module",
+  "rust-analyzer.imports.prefix": "self",
+  "rust-analyzer.assist.importMergeBehavior": "full",
+  "rust-analyzer.completion.autoimport": true,
+  "inlayHint.enable": false
+}

@@ -30,6 +30,8 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 " Code action
 nmap <silent> <leader>a <Plug>(coc-codeaction-cursor)
+" Toggle inlay hints
+nnoremap <silent> <leader>h :CocCommand document.toggleInlayHint<CR>
 
 Plug 'airblade/vim-gitgutter'
 
