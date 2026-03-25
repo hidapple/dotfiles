@@ -13,11 +13,21 @@ eval (/opt/homebrew/bin/brew shellenv)
 # Abbreviations
 abbr -a ls 'ls -GF'
 abbr -a ll 'ls -l -GF'
-abbr -a cl clear
 abbr -a vim nvim
 abbr -a docc 'docker compose'
 abbr -a k kubectl
-abbr -a cc 'tmux split-window -v -p 40 && tmux send-keys "claude" Enter'
+# Git
+abbr -a gaa 'git add --all'
+abbr -a gbr 'git branch'
+abbr -a gcm 'git commit'
+abbr -a gst 'git status'
+abbr -a gsw 'git switch'
+abbr -a gco 'git checkout'
+# Claude
+abbr -a cl claude
+abbr -a clc 'claude --continue'
+abbr -a cld 'claude --dangerously-skip-permissions'
+abbr -a cldc 'claude --dangerously-skip-permissions --continue'
 
 # Keybindings
 bind \cg ghq_fzf
