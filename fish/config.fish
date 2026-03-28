@@ -17,12 +17,13 @@ abbr -a vim nvim
 abbr -a docc 'docker compose'
 abbr -a k kubectl
 # Git
-abbr -a gaa 'git add --all'
+abbr -a gadd 'git add .'
 abbr -a gbr 'git branch'
 abbr -a gcm 'git commit'
 abbr -a gst 'git status'
 abbr -a gsw 'git switch'
 abbr -a gco 'git checkout'
+abbr -a gdiff 'git diff'
 # Claude
 abbr -a cl claude
 abbr -a clc 'claude --continue'
