@@ -36,8 +36,16 @@ ln -snv $DOT/tmux $XDG_CONFIG_HOME/tmux
 # hammerspoon
 # -----------
 ln -snv $DOT/hammerspoon $XDG_CONFIG_HOME/hammerspoon
-defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
+defaults write org.hammerspoon.Hammerspoon MJConfigFile "$HOME/.config/hammerspoon/init.lua"
 
 # ghostty
 # -----------
 ln -snv $DOT/ghostty $XDG_CONFIG_HOME/ghostty
+
+# claude
+# -----------
+mkdir -p $HOME/.claude
+ln -snv $DOT/claude/settings.json            $HOME/.claude/settings.json
+ln -snv $DOT/claude/statusline-command.sh    $HOME/.claude/statusline-command.sh
+ln -snv $DOT/claude/statusline-ratelimits.py $HOME/.claude/statusline-ratelimits.py
+ln -snv $DOT/claude/CLAUDE.md                $HOME/.claude/CLAUDE.md

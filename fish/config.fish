@@ -7,9 +7,6 @@ set -gx LS_COLORS 'di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=4
 # PATH
 fish_add_path $HOME/.local/bin $HOME/.cargo/bin $GOPATH/bin
 
-# Homebrew
-eval (/opt/homebrew/bin/brew shellenv)
-
 # Abbreviations
 abbr -a ls 'ls -GF'
 abbr -a ll 'ls -l -GF'
