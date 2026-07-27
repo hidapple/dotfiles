@@ -1,8 +1,23 @@
 {
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "model": "claude-fable-5[1m]",
+  "permissions": {
+    "defaultMode": "auto"
+  },
   "statusLine": {
     "type": "command",
     "command": "bash ~/.claude/statusline-command.sh"
   },
+  "enabledPlugins": {
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true
+  },
+  "effortLevel": "xhigh",
+  "tui": "fullscreen",
   "theme": "dark",
-  "model": "claude-fable-5[1m]"
+  "editorMode": "vim",
+  "skipWorkflowUsageWarning": true
 }

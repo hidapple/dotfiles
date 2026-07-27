@@ -21,11 +21,10 @@ abbr -a gst 'git status'
 abbr -a gsw 'git switch'
 abbr -a gco 'git checkout'
 abbr -a gdiff 'git diff'
+abbr -a gpp 'git pull -p'
 # Claude
 abbr -a cl claude
 abbr -a clc 'claude --continue'
-abbr -a cld 'claude --dangerously-skip-permissions'
-abbr -a cldc 'claude --dangerously-skip-permissions --continue'
 
 # Keybindings
 bind \cg ghq_fzf

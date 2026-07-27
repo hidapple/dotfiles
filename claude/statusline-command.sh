@@ -8,6 +8,16 @@ cwd=$(echo "$input" | jq -r '.cwd')
 home="$HOME"
 cwd="${cwd/#$home/\~}"
 
+# Abbreviate middle path components when the cwd is too long
+max_cwd=30
+if [ "${#cwd}" -gt "$max_cwd" ]; then
+    IFS='/' read -ra parts <<< "$cwd"
+    n=${#parts[@]}
+    if [ "$n" -gt 3 ]; then
+        cwd="${parts[0]}/…/${parts[n-2]}/${parts[n-1]}"
+    fi
+fi
+
 # Styling shared with the Pattern 5 segment: dim labels, " │ " separators.
 R='\033[0m'
 DIM='\033[2m'
@@ -24,8 +34,8 @@ if [ -n "$git_branch" ]; then
     git_info="⎇ ${git_branch}${staged}${unstaged}"
 fi
 
-# Single line: cwd │ git │ model + usage (Pattern 5 - braille dots)
+# Line 1: cwd │ git / Line 2: model + usage (Pattern 5 - braille dots)
 line="${cwd}"
 [ -n "$git_info" ] && line="${line}${SEP}${git_info}"
-printf "%b" "${line}${SEP}"
+printf "%b\n" "${line}"
 printf '%s' "$input" | python3 "$HOME/.claude/statusline-ratelimits.py"
