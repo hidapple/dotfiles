@@ -65,12 +65,12 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 " Override Files command to include dotfiles
 command! -bang -nargs=? -complete=dir Files
-\ call fzf#vim#files(<q-args>, { 'source': 'ag --hidden --ignore .git -g ""' }, <bang>0)
+\ call fzf#vim#files(<q-args>, { 'source': 'rg --files --hidden --glob "!.git"' }, <bang>0)
 " Key mapping
 nnoremap ,f  :Files<CR>
 nnoremap ,gf :GFiles<CR>
 nnoremap ,b  :Buffers<CR>
-nnoremap ,ag :Ag<CR>
+nnoremap ,ag :Rg<CR>
 
 Plug 'tyru/open-browser.vim'
 Plug 'kannokanno/previm'

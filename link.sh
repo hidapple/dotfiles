@@ -29,10 +29,6 @@ ln -snv $DOT/vim/coc-settings.json $XDG_CONFIG_HOME/nvim/coc-settings.json
 # -----------
 ln -snv $DOT/git $XDG_CONFIG_HOME/git
 
-# tmux
-# -----------
-ln -snv $DOT/tmux $XDG_CONFIG_HOME/tmux
-
 # hammerspoon
 # -----------
 ln -snv $DOT/hammerspoon $XDG_CONFIG_HOME/hammerspoon
